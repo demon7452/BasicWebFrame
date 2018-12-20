@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Hello, ${name} !!!</h1>
+<h1>${domain}</h1>
 
 </body>
 </html>
