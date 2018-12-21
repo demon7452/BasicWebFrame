@@ -1,6 +1,6 @@
 package com.service;
 
-import com.dao.UserMapper;
+import com.dao.UserDao;
 import com.dao.entities.User;
 import com.service.api.UserServiceApi;
 import org.springframework.stereotype.Service;
@@ -11,10 +11,10 @@ import javax.annotation.Resource;
 public class UserServiceImpl implements UserServiceApi {
 
     @Resource
-    private UserMapper userMapper;
+    private UserDao userDao;
 
     @Override
     public User queryById(long id) {
-        return userMapper.queryById(id);
+        return userDao.selectByPrimaryKey(id);
     }
 }
