@@ -1,24 +1,33 @@
 package com.dao;
 
 import com.basic.BaseTest;
-import com.basic.dao.UserDao;
-import com.basic.entity.User;
+import com.dao.entities.User;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+import java.util.Date;
 
 public class UserDaoTest extends BaseTest {
-    @Autowired
+
+    @Resource
     private UserDao userDao;
 
-
     @Test
+    @Ignore
     public void query_by_id_test(){
-        int user_id = 1;
 
-        User user = userDao.queryById(user_id);
+        User user = new User();
+        user.setName("xiong");
+        user.setEmail("1234@qq.com");
+        user.setPassword("123456");
+        user.setCreateTime(new Date());
+        user.setUpdateTime(new Date());
 
-        Assert.assertNotNull(user);
+        userDao.insertSelective(user);
+
+        User userFind = userDao.selectByPrimaryKey(user.getId());
+
+        Assert.assertNotNull(userFind);
     }
-
 }

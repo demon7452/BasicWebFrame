@@ -1,11 +1,22 @@
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-  `name` varchar(45) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户名',
-  `password` varchar(45) NOT NULL COMMENT '密码',
-  `is_servant` int(11) NOT NULL DEFAULT '0' COMMENT '是否是服务人员;0:false; 1:true;',
-  `score` int(11) NOT NULL DEFAULT '0' COMMENT '评分',
-  `create_time` datetime NOT NULL COMMENT '创建时间',
-  `update_time` datetime NOT NULL COMMENT '更新时间',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `name_UNIQUE` (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+DROP table IF EXISTS `user`;
+
+create table user
+(
+  id          int auto_increment
+  comment '用户ID '
+    primary key,
+  name        varchar(20) default '默认用户' null
+  comment '用户名',
+  email       varchar(30)                not null
+  comment '邮箱',
+  password    varchar(20)                not null
+  comment '用户密码',
+  create_time datetime                   not null
+  comment '创建时间',
+  update_time datetime                   not null
+  comment '更新时间',
+  constraint user_email_uindex
+  unique (email)
+)
+  comment '用户表';
+
