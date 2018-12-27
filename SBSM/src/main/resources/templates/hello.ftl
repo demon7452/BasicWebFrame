@@ -7,6 +7,7 @@
 <body>
 <h1>Hello, ${name} !!!</h1>
 <h1>${domain}</h1>
+<h2>${staticDomainUrl}</h2>
 
 </body>
 </html>
