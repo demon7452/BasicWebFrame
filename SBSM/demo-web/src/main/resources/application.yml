@@ -8,6 +8,11 @@ spring:
     url: jdbc:mysql://localhost:3333/demo
     username: root
     password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  freemarker:
+    charset: UTF-8
+    template-loader-path: classpath:/templates
+    suffix: .ftl
 
 mybatis:
   mapper-locations: classpath*:mapper/*.xml
