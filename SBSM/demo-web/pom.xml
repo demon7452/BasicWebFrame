@@ -25,6 +25,12 @@
             <version>${demo.api.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>xiong</groupId>
+            <artifactId>demo-dao</artifactId>
+            <version>${demo.dao.version}</version>
+        </dependency>
+
         <!--必须引入service的包才能注入service中的bean-->
         <dependency>
             <groupId>xiong</groupId>

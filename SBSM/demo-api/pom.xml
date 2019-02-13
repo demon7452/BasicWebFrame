@@ -16,10 +16,8 @@
     <dependencies>
         <dependency>
             <groupId>xiong</groupId>
-            <artifactId>demo-lib</artifactId>
-            <version>${demo.lib.version}</version>
+            <artifactId>demo-dao</artifactId>
+            <version>${demo.dao.version}</version>
         </dependency>
     </dependencies>
-
-
 </project>

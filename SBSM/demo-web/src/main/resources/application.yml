@@ -4,3 +4,10 @@ server:
 spring:
   application:
     name: demo-web
+  datasource:
+    url: jdbc:mysql://localhost:3333/demo
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml

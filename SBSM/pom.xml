@@ -17,15 +17,18 @@
     <modules>
         <module>demo-lib</module>
         <module>demo-api</module>
+        <module>demo-dao</module>
         <module>demo-service</module>
         <module>demo-web</module>
-        <module>demo-dao</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <demo.lib.version>1.0.0</demo.lib.version>
         <demo.api.version>1.0.0</demo.api.version>
+        <demo.dao.version>1.0.0</demo.dao.version>
+        <demo.service.version>1.0.0</demo.service.version>
+        <demo.web.version>1.0.0</demo.web.version>
     </properties>
 
     <dependencies>
